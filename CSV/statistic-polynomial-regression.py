@@ -22,7 +22,7 @@ cdet = 1 - dif.sum() / dif_media.sum()
 print(cdet)
 
 # dispersao
-plt.plot(df6["Exame 1"], df6["Exame 2"], '.')
+plt.plot(nota1, nota2, '.')
 
 # curva de grau 3
 x = np.arange(0, 250, 1)
