@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
 # lendo a planilha
 df7 = pd.read_csv(
     "https://drive.google.com/u/1/uc?id=1ZNKsK1dGsDiGDU3841yA-MdK1H3QSdxc&export=download")
@@ -16,3 +20,11 @@ dif_media = (nota2-media)**2
 # coef de determinação
 cdet = 1 - dif.sum() / dif_media.sum()
 print(cdet)
+
+# dispersao
+plt.plot(df6["Exame 1"], df6["Exame 2"], '.')
+
+# curva de grau 3
+x = np.arange(0, 250, 1)
+y = a*x**3+b*x**2+c*x+d
+plt.plot(x, y, 'r')
