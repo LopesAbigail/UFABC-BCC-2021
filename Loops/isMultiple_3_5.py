@@ -52,3 +52,18 @@ def isMultiple_3_5_test():
         print("Com 2028 funciou!")
     else:
         print("Com 2028 não funciou!")
+
+
+# Without function
+# for i in range(0,8):
+    # numero = int(input())
+    # if (numero % 15 == 0):
+    #     print(numero, "é múltiplo de três e cinco")
+    # else:
+    #     if (numero % 5 == 0):
+    #         print(numero, "é múltiplo de cinco")
+    #     else:
+    #         if(numero % 3 == 0):
+    #             print(numero, "é múltiplo de três")
+    #         else:
+    #             print(numero)
