@@ -6,18 +6,16 @@
 # Se não, imprima apenas o numero
 
 def isMultiple_3_5(numero):
-    for i in range(0, 8):
-        if (numero % 15 == 0):
-            return str(numero)+" é múltiplo de três e cinco"
+    if (numero % 15 == 0):
+        return str(numero)+" é múltiplo de três e cinco"
+    else:
+        if (numero % 5 == 0):
+            return str(numero)+" é múltiplo de cinco"
         else:
-            if (numero % 5 == 0):
-                return str(numero)+" é múltiplo de cinco"
+            if(numero % 3 == 0):
+                return str(numero)+" é múltiplo de três"
             else:
-                if(numero % 3 == 0):
-                    return str(numero)+" é múltiplo de três"
-                else:
-                    return(str(numero))
-
+                return(str(numero))
 
 def isMultiple_3_5_test():
     if (isMultiple_3_5(451) == "451"):
@@ -54,7 +52,7 @@ def isMultiple_3_5_test():
         print("Com 2028 não funciou!")
 
 
-# Without function
+# With loop - without function
 # for i in range(0,8):
     # numero = int(input())
     # if (numero % 15 == 0):
