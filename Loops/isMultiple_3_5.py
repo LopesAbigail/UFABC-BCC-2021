@@ -5,17 +5,17 @@
 # • " é múltiplo de três e cinco"
 # Se não, imprima apenas o numero
 
-def isMultiple_3_5(numero):
-    if (numero % 15 == 0):
-        return str(numero)+" é múltiplo de três e cinco"
+def isMultiple_3_5(number):
+    return_value = str(number)
+    if (number % 3 == 0):
+      if (number % 5 == 0):
+          return_value += " é múltiplo de três e cinco"
+      else:
+          return_value += " é múltiplo de três"
     else:
-        if (numero % 5 == 0):
-            return str(numero)+" é múltiplo de cinco"
-        else:
-            if(numero % 3 == 0):
-                return str(numero)+" é múltiplo de três"
-            else:
-                return(str(numero))
+      if (number % 5 == 0):
+          return_value+" é múltiplo de cinco"
+    return return_value
 
 def isMultiple_3_5_test():
     if (isMultiple_3_5(451) == "451"):
