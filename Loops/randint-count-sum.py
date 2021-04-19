@@ -1,20 +1,17 @@
 import random as rd
 seed = int(input())
 rd.seed(seed)
+quantidade_execucao = int(input())
+soma_sorteios_feitos = 0
+media_sorteios_feitos = 0
 
-# não modifique as linhas acima, pois elas serão usadas pelo corretor automático
-# Para testar aqui, no Notebook, digite um número qualquer para seed
-# continue seu código a partir daqui
-n = int(input())
-somatorio_r = 0
-
-for i in range(0, n):
-    s = 0
-    r = 0
-    while s < 1:
-        r = r+1
-        x = rd.random()
-        s = s+x
-    somatorio_r += r
-media = somatorio_r / n
-print("%.4f" % media)
+for i in range(0, quantidade_execucao):
+    soma_valores_aleatorios = 0
+    quantidade_sorteios_feitos = 0
+    while soma_valores_aleatorios < 1:
+        quantidade_sorteios_feitos = quantidade_sorteios_feitos+1
+        valor_aleatorio = rd.random()
+        soma_valores_aleatorios = soma_valores_aleatorios+valor_aleatorio
+    soma_sorteios_feitos += quantidade_sorteios_feitos
+media_sorteios_feitos = soma_sorteios_feitos / quantidade_execucao
+print("%.4f" % media_sorteios_feitos)
